@@ -47,7 +47,7 @@ eval "screen -L -h 2048 -dmS minecraft java -Xmx${heap} -Xms${heap} -jar minecra
 main_pid=$!
 
 # Flush the logfile every second, and ensure that the logfile exists
-screen -X "logfile 1" && sleep 1
+# screen -X "logfile 1" && sleep 1
 
 echo "Tailing log"
 eval "tail -f screenlog.0 &"
